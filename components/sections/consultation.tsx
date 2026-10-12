@@ -32,7 +32,7 @@ export function Consultation({ dict }: { dict: Dictionary["consultation"] }) {
         className="absolute -bottom-40 -inset-s-32 -z-10 size-[26rem] rounded-full bg-brand-500/30 blur-3xl"
       />
 
-      <div className="container-page grid gap-14 lg:grid-cols-[1fr_1.05fr] lg:items-center">
+      <div className="container-page grid grid-cols-1 gap-14 lg:grid-cols-[1fr_1.05fr] lg:items-center">
         <div>
           <SectionHeading
             align="start"
@@ -41,7 +41,7 @@ export function Consultation({ dict }: { dict: Dictionary["consultation"] }) {
             title={dict.title}
             description={dict.description}
           />
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a href="#contact" className="btn btn-light btn-lg">
               {dict.book}
               <ArrowRightIcon className="size-5" />

@@ -12,7 +12,7 @@ export function Process({ dict }: { dict: Dictionary["process"] }) {
             aria-hidden="true"
             className="absolute top-7 right-[12.5%] left-[12.5%] hidden h-px bg-gradient-to-r from-brand-200 via-aqua-300 to-brand-200 lg:block"
           />
-          <ol className="relative grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <ol className="relative grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {dict.steps.map((step, index) => (
               <li key={step.title} className="relative text-center">
                 <span className="relative mx-auto flex size-14 items-center justify-center rounded-2xl border border-brand-100 bg-white text-lg font-extrabold text-brand-600 shadow-lg shadow-brand-500/10">

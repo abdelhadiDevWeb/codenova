@@ -1,6 +1,6 @@
 import { cacheLife } from "next/cache";
 import type { ReactNode } from "react";
-import { DownloadIcon, MailIcon, PhoneIcon } from "@/components/icons";
+import { DownloadIcon, MailIcon, MapPinIcon, PhoneIcon } from "@/components/icons";
 import { Logo } from "@/components/logo";
 import type { Dictionary } from "@/lib/dictionaries/types";
 import type { Locale } from "@/lib/i18n";
@@ -16,7 +16,7 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const { footer } = dict;
   return (
     <footer className="bg-navy-950 text-slate-300">
-      <div className="container-page grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
+      <div className="container-page grid grid-cols-1 gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
         <div>
           <Logo href={`/${lang}`} label={dict.header.home} variant="dark" />
           <p className="mt-5 max-w-xs text-sm leading-7 text-slate-400">{dict.site.description}</p>
@@ -55,6 +55,17 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             <a href={site.phoneHref} className="footer-link inline-flex items-center gap-2.5">
               <PhoneIcon className="size-4 text-aqua-300" />
               <span dir="ltr">{site.phone}</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href={site.mapsHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link inline-flex items-center gap-2.5"
+            >
+              <MapPinIcon className="size-4 shrink-0 text-aqua-300" />
+              {dict.contact.location}
             </a>
           </li>
           <li>

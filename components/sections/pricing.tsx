@@ -9,7 +9,7 @@ export function Pricing({ dict, getQuote }: { dict: Dictionary["pricing"]; getQu
       <div className="container-page">
         <SectionHeading eyebrow={dict.eyebrow} title={dict.title} description={dict.description} />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {dict.items.map((plan) => (
             <article
               key={plan.title}

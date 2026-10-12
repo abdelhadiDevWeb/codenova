@@ -112,7 +112,7 @@ export function SiteHeader({
           <div className="mt-4 border-t border-slate-100 pt-4">
             <LanguageLinks lang={lang} label={labels.language} onNavigate={() => setOpen(false)} />
           </div>
-          <div className="mt-4 grid gap-2 sm:grid-cols-2">
+          <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
             <a
               href={site.catalogueHref}
               download={site.catalogueFileName}

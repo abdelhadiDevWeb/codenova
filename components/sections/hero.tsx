@@ -23,7 +23,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
         className="absolute top-60 -left-40 -z-10 size-[420px] rounded-full bg-brand-500/15 blur-3xl"
       />
 
-      <div className="container-page grid items-center gap-16 pt-16 pb-20 lg:grid-cols-[1.05fr_1fr] lg:pt-24 lg:pb-28">
+      <div className="container-page grid grid-cols-1 items-center gap-16 pt-16 pb-20 lg:grid-cols-[1.05fr_1fr] lg:pt-24 lg:pb-28">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-white/80 px-3.5 py-1.5 text-sm font-medium text-navy-800 shadow-sm">
             <span className="relative flex size-2">
@@ -40,7 +40,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">{hero.description}</p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a href="#consultation" className="btn btn-primary btn-lg">
               {header.freeConsultation}
               <ArrowRightIcon className="size-5" />

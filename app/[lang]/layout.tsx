@@ -3,6 +3,8 @@ import { Cairo, Plus_Jakarta_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/lib/dictionaries";
 import { hasLocale, localeDir, locales } from "@/lib/i18n";
+import { languageAlternates, ogLocale } from "@/lib/seo";
+import { site } from "@/lib/site";
 import "../globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -24,25 +26,44 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary(lang);
 
+  const { title, description, keywords } = dict.meta;
+  const ogImage = { url: site.ogImagePath, width: 1200, height: 630, alt: site.name };
+  const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
+
   return {
-    title: dict.meta.title,
-    description: dict.meta.description,
-    keywords: [
-      "CodeNova",
-      "web development",
-      "landing page",
-      "e-commerce website",
-      "UI/UX design",
-      "mobile app development",
-      "desktop software",
-      "IT agency",
-    ],
-    openGraph: {
-      title: dict.meta.title,
-      description: dict.meta.description,
-      siteName: "CodeNova",
-      type: "website",
+    metadataBase: new URL(site.url),
+    title,
+    description,
+    keywords,
+    applicationName: site.name,
+    creator: site.name,
+    publisher: site.name,
+    alternates: {
+      canonical: `/${lang}`,
+      languages: languageAlternates(),
     },
+    openGraph: {
+      title,
+      description,
+      url: `/${lang}`,
+      siteName: site.name,
+      type: "website",
+      locale: ogLocale[lang],
+      alternateLocale: locales.filter((locale) => locale !== lang).map((locale) => ogLocale[locale]),
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+    },
+    ...(googleVerification && { verification: { google: googleVerification } }),
   };
 }
 

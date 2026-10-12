@@ -14,7 +14,7 @@ const icons: Record<ReasonIcon, ComponentType<SVGProps<SVGSVGElement>>> = {
 export function WhyUs({ dict }: { dict: Dictionary["whyUs"] }) {
   return (
     <section id="why-us" className="section bg-brand-50/60">
-      <div className="container-page grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <div className="container-page grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
           <SectionHeading
             align="start"
@@ -22,7 +22,7 @@ export function WhyUs({ dict }: { dict: Dictionary["whyUs"] }) {
             title={dict.title}
             description={dict.description}
           />
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a href={site.phoneHref} className="btn btn-primary">
               <PhoneIcon className="size-4" />
               {dict.call} <span dir="ltr">{site.phone}</span>
@@ -34,7 +34,7 @@ export function WhyUs({ dict }: { dict: Dictionary["whyUs"] }) {
           </div>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           {dict.reasons.map((reason) => {
             const Icon = icons[reason.icon];
             return (

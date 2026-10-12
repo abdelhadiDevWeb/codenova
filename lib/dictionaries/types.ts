@@ -1,4 +1,4 @@
-export type ServiceIcon = "web" | "design" | "mobile" | "desktop";
+export type ServiceIcon = "web" | "design" | "mobile" | "desktop" | "ai";
 export type ReasonIcon = "target" | "bolt" | "spark" | "shield";
 export type ConsultationIcon = "listen" | "showcase" | "plan" | "quote";
 
@@ -18,26 +18,36 @@ export type HeaderDictionary = {
 export type ContactFormDictionary = {
   title: string;
   subtitle: string;
+  clientType: string;
+  individual: string;
+  company: string;
   name: string;
   namePlaceholder: string;
-  contact: string;
-  contactPlaceholder: string;
+  companyName: string;
+  companyNamePlaceholder: string;
+  email: string;
+  emailPlaceholder: string;
+  phone: string;
+  phonePlaceholder: string;
   service: string;
   servicePlaceholder: string;
   services: string[];
   message: string;
   messagePlaceholder: string;
   submit: string;
-  sent: string;
+  sending: string;
+  success: string;
+  error: string;
+  invalid: string;
   note: string;
   emailSubject: string;
   emailName: string;
-  emailContact: string;
+  emailClientType: string;
   emailService: string;
 };
 
 export type Dictionary = {
-  meta: { title: string; description: string };
+  meta: { title: string; description: string; keywords: string[] };
   site: { tagline: string; description: string };
   nav: NavLink[];
   header: HeaderDictionary;
@@ -118,6 +128,8 @@ export type Dictionary = {
     description: string;
     emailLabel: string;
     phoneLabel: string;
+    locationLabel: string;
+    location: string;
     catalogueLabel: string;
     catalogueAction: string;
     form: ContactFormDictionary;

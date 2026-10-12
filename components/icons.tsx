@@ -58,6 +58,16 @@ export function DesktopIcon(props: IconProps) {
   );
 }
 
+export function AiIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <rect x="5" y="5" width="14" height="14" rx="3" />
+      <path d="M9 2.5V5M15 2.5V5M9 19v2.5M15 19v2.5M2.5 9H5M2.5 15H5M19 9h2.5M19 15h2.5" />
+      <path d="m8.8 15 1.7-6h1l1.7 6M9.4 13h3.2M15.5 9v6" />
+    </Icon>
+  );
+}
+
 export function MailIcon(props: IconProps) {
   return (
     <Icon {...props}>
@@ -71,6 +81,15 @@ export function PhoneIcon(props: IconProps) {
   return (
     <Icon {...props}>
       <path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" />
+    </Icon>
+  );
+}
+
+export function MapPinIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M12 21s-7-5.6-7-11.5a7 7 0 0 1 14 0C19 15.4 12 21 12 21Z" />
+      <circle cx="12" cy="9.5" r="2.5" />
     </Icon>
   );
 }
@@ -192,6 +211,24 @@ export function RouteIcon(props: IconProps) {
       <circle cx="6" cy="18" r="2.5" />
       <circle cx="18" cy="6" r="2.5" />
       <path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5" />
+    </Icon>
+  );
+}
+
+export function UserIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <circle cx="12" cy="8" r="3.5" />
+      <path d="M5 20a7 7 0 0 1 14 0" />
+    </Icon>
+  );
+}
+
+export function BuildingIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M4 21V5.5A1.5 1.5 0 0 1 5.5 4h8A1.5 1.5 0 0 1 15 5.5V21M15 10h3.5a1.5 1.5 0 0 1 1.5 1.5V21M2.5 21h19" />
+      <path d="M8 8h3M8 12h3M8 16h3" />
     </Icon>
   );
 }

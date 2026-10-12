@@ -18,7 +18,7 @@ export function CatalogueCta({ dict }: { dict: Dictionary["catalogue"] }) {
             className="absolute -inset-e-24 -bottom-32 size-96 rounded-full bg-aqua-400/30 blur-3xl"
           />
 
-          <div className="relative grid items-center gap-12 lg:grid-cols-[1.3fr_1fr]">
+          <div className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.3fr_1fr]">
             <div>
               <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-sm font-medium text-aqua-300 ring-1 ring-white/15">
                 <FileIcon className="size-4" />
@@ -31,7 +31,7 @@ export function CatalogueCta({ dict }: { dict: Dictionary["catalogue"] }) {
                 {dict.title}
               </h2>
               <p className="mt-4 max-w-xl text-lg leading-8 text-slate-300">{dict.description}</p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
                   href={site.catalogueHref}
                   download={site.catalogueFileName}
