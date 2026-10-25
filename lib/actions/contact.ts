@@ -51,11 +51,10 @@ export async function sendContactMessage(
     phoneDigits > 15;
   if (invalid) return { status: "invalid" };
 
-  const user = process.env.SMTP_USER;
-  // Gmail shows app passwords in groups of four; the spaces are not part of the password.
-  const pass = process.env.SMTP_PASS?.replace(/\s/g, "");
-  if (!user || !pass) {
-    console.error("Contact form: SMTP_USER or SMTP_PASS is not set.");
+  const { SMTP_HOST: host, SMTP_USER: user, SMTP_PASSWORD: pass } = process.env;
+  const port = Number(process.env.SMTP_PORT || 465);
+  if (!host || !user || !pass) {
+    console.error("Contact form: SMTP_HOST, SMTP_USER or SMTP_PASSWORD is not set.");
     return { status: "error" };
   }
 
@@ -72,14 +71,15 @@ export async function sendContactMessage(
   const sender = isCompany ? `${values.name}, ${company}` : values.name;
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
+    host,
+    port,
+    // Port 465 uses SSL from the start; 587 starts plain and upgrades with STARTTLS.
+    secure: port === 465,
     auth: { user, pass },
   });
 
   const mail = {
-    // Gmail rewrites any other sender address to the authenticated account.
+    // Mail servers reject or flag senders other than the authenticated account.
     from: { name: `${site.name} Website`, address: user },
     to: process.env.CONTACT_TO_EMAIL || site.email,
     replyTo: values.email,

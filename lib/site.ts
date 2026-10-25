@@ -1,9 +1,9 @@
 export const site = {
   name: "CodeNoova",
-  url: "https://dzcode-nova.vercel.app",
+  url: "https://codenoova.codes",
   logoPath: "/logo-512.png",
   ogImagePath: "/og-image.jpg",
-  email: "codenoova.dz@gmail.com",
+  email: "contact@codenoova.codes",
   phone: "0782 86 01 82",
   phoneHref: "tel:+213782860182",
   address: { locality: "Draria", region: "Alger", country: "DZ" },
