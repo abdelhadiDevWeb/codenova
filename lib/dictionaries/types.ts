@@ -37,6 +37,9 @@ export type ContactFormDictionary = {
   submit: string;
   sending: string;
   success: string;
+  successTitle: string;
+  successMessage: string;
+  close: string;
   error: string;
   invalid: string;
   note: string;

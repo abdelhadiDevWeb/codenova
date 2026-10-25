@@ -25,7 +25,10 @@ export async function sendContactMessage(
   const field = (key: string) => String(formData.get(key) ?? "").trim();
 
   // Hidden "website" field: real visitors never fill it, spam bots do.
-  if (field("website")) return { status: "success" };
+  if (field("website")) {
+    console.warn("Contact form: hidden anti-spam field was filled, message not sent.");
+    return { status: "success" };
+  }
 
   const values = {
     name: field("name"),

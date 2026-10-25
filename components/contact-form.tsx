@@ -28,10 +28,13 @@ export function ContactForm({ dict, lang }: { dict: ContactFormDictionary; lang:
   const [state, formAction, pending] = useActionState(sendContactMessage, initialState);
   const [clientType, setClientType] = useState<ClientType>("individual");
   const formRef = useRef<HTMLFormElement>(null);
+  const successDialogRef = useRef<HTMLDialogElement>(null);
   const isCompany = clientType === "company";
 
   useEffect(() => {
-    if (state.status === "success") formRef.current?.reset();
+    if (state.status !== "success") return;
+    formRef.current?.reset();
+    successDialogRef.current?.showModal();
   }, [state]);
 
   // Submitting manually (instead of <form action>) keeps the visitor's text if sending fails.
@@ -190,6 +193,33 @@ export function ContactForm({ dict, lang }: { dict: ContactFormDictionary; lang:
           </>
         )}
       </p>
+
+      <dialog
+        ref={successDialogRef}
+        aria-labelledby="contact-success-title"
+        onClick={(event) => {
+          if (event.target === event.currentTarget) event.currentTarget.close();
+        }}
+        className="m-auto w-[calc(100%-2rem)] max-w-md rounded-3xl bg-white p-0 text-center shadow-2xl shadow-navy-900/20 backdrop:bg-navy-950/60 backdrop:backdrop-blur-sm"
+      >
+        <div className="p-8 sm:p-10">
+          <span className="mx-auto flex size-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 ring-8 ring-emerald-50/60">
+            <CheckIcon className="size-8" strokeWidth={2.5} />
+          </span>
+          <h2 id="contact-success-title" className="mt-6 text-2xl font-bold text-navy-900">
+            {dict.successTitle}
+          </h2>
+          <p className="mt-3 leading-7 text-slate-600">{dict.successMessage}</p>
+          <button
+            type="button"
+            autoFocus
+            onClick={() => successDialogRef.current?.close()}
+            className="btn btn-primary btn-lg mt-8 w-full"
+          >
+            {dict.close}
+          </button>
+        </div>
+      </dialog>
     </form>
   );
 }
