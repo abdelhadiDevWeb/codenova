@@ -24,8 +24,8 @@ export async function sendContactMessage(
 ): Promise<ContactState> {
   const field = (key: string) => String(formData.get(key) ?? "").trim();
 
-  // Hidden "website" field: real visitors never fill it, spam bots do.
-  if (field("website")) {
+  // Hidden anti-spam field: real visitors never fill it, spam bots do.
+  if (field("hp_extra")) {
     console.warn("Contact form: hidden anti-spam field was filled, message not sent.");
     return { status: "success" };
   }
@@ -103,7 +103,8 @@ export async function sendContactMessage(
   };
 
   try {
-    await transporter.sendMail(mail);
+    const info = await transporter.sendMail(mail);
+    console.info(`Contact form: accepted by the mail server for ${info.accepted.join(", ")} (${info.response})`);
   } catch (error) {
     console.error(`Contact form: sending failed: ${error instanceof Error ? error.message : String(error)}`);
     return { status: "error" };

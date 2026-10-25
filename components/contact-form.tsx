@@ -62,9 +62,10 @@ export function ContactForm({ dict, lang }: { dict: ContactFormDictionary; lang:
 
       <input type="hidden" name="lang" value={lang} />
       <div aria-hidden="true" className="sr-only">
+        {/* Neutral name and label so browser autofill and password managers leave it empty. */}
         <label>
-          Website
-          <input name="website" tabIndex={-1} autoComplete="off" />
+          Leave this field empty
+          <input name="hp_extra" type="text" tabIndex={-1} autoComplete="off" data-1p-ignore data-lpignore="true" />
         </label>
       </div>
 
