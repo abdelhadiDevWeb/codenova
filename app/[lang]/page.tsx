@@ -27,7 +27,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         "@type": "Organization",
         "@id": `${site.url}/#organization`,
         name: site.name,
-        alternateName: ["Code Nova", "CodeNova DZ"],
+        alternateName: ["Code Noova", "CodeNoova DZ"],
         url: site.url,
         logo: { "@type": "ImageObject", url: `${site.url}${site.logoPath}`, width: 512, height: 512 },
         image: `${site.url}${site.ogImagePath}`,

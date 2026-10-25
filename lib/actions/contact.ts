@@ -1,6 +1,6 @@
 "use server";
 
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 import { getDictionary } from "@/lib/dictionaries";
 import { defaultLocale, hasLocale } from "@/lib/i18n";
 import { site } from "@/lib/site";
@@ -51,9 +51,11 @@ export async function sendContactMessage(
     phoneDigits > 15;
   if (invalid) return { status: "invalid" };
 
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error("Contact form: RESEND_API_KEY is not set.");
+  const user = process.env.SMTP_USER;
+  // Gmail shows app passwords in groups of four; the spaces are not part of the password.
+  const pass = process.env.SMTP_PASS?.replace(/\s/g, "");
+  if (!user || !pass) {
+    console.error("Contact form: SMTP_USER or SMTP_PASS is not set.");
     return { status: "error" };
   }
 
@@ -69,8 +71,16 @@ export async function sendContactMessage(
   ];
   const sender = isCompany ? `${values.name}, ${company}` : values.name;
 
-  const { error } = await new Resend(apiKey).emails.send({
-    from: process.env.RESEND_FROM || "CodeNova Website <onboarding@resend.dev>",
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: { user, pass },
+  });
+
+  const mail = {
+    // Gmail rewrites any other sender address to the authenticated account.
+    from: { name: `${site.name} Website`, address: user },
     to: process.env.CONTACT_TO_EMAIL || site.email,
     replyTo: values.email,
     subject: `${labels.emailSubject} — ${values.service} (${sender})`,
@@ -87,10 +97,12 @@ export async function sendContactMessage(
   </table>
   <div style="white-space:pre-wrap;padding:16px;background:#f1f5f9;border-radius:12px">${escapeHtml(values.message)}</div>
 </div>`,
-  });
+  };
 
-  if (error) {
-    console.error(`Contact form: Resend error (${error.name}): ${error.message}`);
+  try {
+    await transporter.sendMail(mail);
+  } catch (error) {
+    console.error(`Contact form: sending failed: ${error instanceof Error ? error.message : String(error)}`);
     return { status: "error" };
   }
   return { status: "success" };

@@ -62,7 +62,7 @@ export function CatalogueCta({ dict }: { dict: Dictionary["catalogue"] }) {
                 <p className="mt-4 text-lg font-extrabold tracking-tight">
                   <span dir="ltr">
                     <span className="text-navy-900">Code</span>
-                    <span className="text-brand-500">Nova</span>
+                    <span className="text-brand-500">Noova</span>
                   </span>
                 </p>
                 <p className="text-xs font-medium text-slate-500">{dict.coverLabel}</p>

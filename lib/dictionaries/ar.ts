@@ -2,13 +2,13 @@ import type { Dictionary } from "./types";
 
 export const ar: Dictionary = {
   meta: {
-    title: "CodeNova — تصميم وإنشاء المواقع وبرمجة التطبيقات في الجزائر",
+    title: "CodeNoova — تصميم وإنشاء المواقع وبرمجة التطبيقات في الجزائر",
     description:
-      "CodeNova لتصميم وإنشاء المواقع الإلكترونية، صفحات الهبوط، المتاجر الإلكترونية، تطبيقات الهاتف والبرامج المخصّصة في الجزائر. أسعار واضحة بالدينار واستشارة مجانية.",
+      "CodeNoova لتصميم وإنشاء المواقع الإلكترونية، صفحات الهبوط، المتاجر الإلكترونية، تطبيقات الهاتف والبرامج المخصّصة في الجزائر. أسعار واضحة بالدينار واستشارة مجانية.",
     keywords: [
-      "CodeNova",
+      "CodeNoova",
       "كود نوفا",
-      "CodeNova DZ",
+      "CodeNoova DZ",
       "تصميم مواقع الجزائر",
       "إنشاء موقع إلكتروني في الجزائر",
       "تصميم موقع إلكتروني",
@@ -37,11 +37,11 @@ export const ar: Dictionary = {
     { label: "الخدمات", href: "#services" },
     { label: "الأسعار", href: "#pricing" },
     { label: "طريقة العمل", href: "#process" },
-    { label: "لماذا CodeNova", href: "#why-us" },
+    { label: "لماذا CodeNoova", href: "#why-us" },
     { label: "تواصل معنا", href: "#contact" },
   ],
   header: {
-    home: "CodeNova — الصفحة الرئيسية",
+    home: "CodeNoova — الصفحة الرئيسية",
     catalogue: "الكتالوج",
     downloadCatalogue: "تحميل الكتالوج",
     getQuote: "اطلب عرض سعر",
@@ -226,7 +226,7 @@ export const ar: Dictionary = {
     ],
   },
   whyUs: {
-    eyebrow: "لماذا CodeNova",
+    eyebrow: "لماذا CodeNoova",
     title: "شريك تطوير يمكنك الاعتماد عليه",
     description:
       "نجمع بين التصميم المدروس والهندسة المتينة، ونبقى على تواصل معك في كل خطوة — لتتفرّغ لإدارة أعمالك.",
@@ -267,7 +267,7 @@ export const ar: Dictionary = {
   contact: {
     eyebrow: "تواصل معنا",
     title: "مستعد لبدء مشروعك؟",
-    description: "تواصل مع CodeNova اليوم لحجز استشارتك المجانية والحصول على عرض سعر مخصّص. يسعدنا الإجابة عن أسئلتك.",
+    description: "تواصل مع CodeNoova اليوم لحجز استشارتك المجانية والحصول على عرض سعر مخصّص. يسعدنا الإجابة عن أسئلتك.",
     emailLabel: "راسلنا عبر البريد",
     phoneLabel: "اتصل بنا",
     locationLabel: "موقعنا",

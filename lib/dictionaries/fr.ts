@@ -3,13 +3,13 @@ import type { Dictionary } from "./types";
 // French typography: non-breaking spaces (\u00a0) inside numbers and before "?".
 export const fr: Dictionary = {
   meta: {
-    title: "CodeNova — Création de sites web et d'applications en Algérie",
+    title: "CodeNoova — Création de sites web et d'applications en Algérie",
     description:
-      "CodeNova : création de sites web, landing pages, boutiques e-commerce, applications mobiles et logiciels sur mesure en Algérie. Prix transparents en DA et consultation gratuite.",
+      "CodeNoova : création de sites web, landing pages, boutiques e-commerce, applications mobiles et logiciels sur mesure en Algérie. Prix transparents en DA et consultation gratuite.",
     keywords: [
-      "CodeNova",
-      "Code Nova",
-      "CodeNova DZ",
+      "CodeNoova",
+      "Code Noova",
+      "CodeNoova DZ",
       "création site web Algérie",
       "création site internet Algérie",
       "conception site web Algérie",
@@ -38,11 +38,11 @@ export const fr: Dictionary = {
     { label: "Services", href: "#services" },
     { label: "Tarifs", href: "#pricing" },
     { label: "Méthode", href: "#process" },
-    { label: "Pourquoi CodeNova", href: "#why-us" },
+    { label: "Pourquoi CodeNoova", href: "#why-us" },
     { label: "Contact", href: "#contact" },
   ],
   header: {
-    home: "CodeNova — accueil",
+    home: "CodeNoova — accueil",
     catalogue: "Catalogue",
     downloadCatalogue: "Télécharger le catalogue",
     getQuote: "Demander un devis",
@@ -232,7 +232,7 @@ export const fr: Dictionary = {
     ],
   },
   whyUs: {
-    eyebrow: "Pourquoi CodeNova",
+    eyebrow: "Pourquoi CodeNoova",
     title: "Un partenaire de développement sur qui compter",
     description:
       "Nous allions design soigné et ingénierie solide, et restons joignables à chaque étape — pour que vous puissiez vous concentrer sur votre activité.",
@@ -277,7 +277,7 @@ export const fr: Dictionary = {
     eyebrow: "Contact",
     title: "Prêt à lancer votre projet\u00a0?",
     description:
-      "Contactez CodeNova dès aujourd'hui pour réserver votre consultation gratuite et obtenir un devis personnalisé. Nous serons ravis de répondre à vos questions.",
+      "Contactez CodeNoova dès aujourd'hui pour réserver votre consultation gratuite et obtenir un devis personnalisé. Nous serons ravis de répondre à vos questions.",
     emailLabel: "Écrivez-nous",
     phoneLabel: "Appelez-nous",
     locationLabel: "Où nous trouver",

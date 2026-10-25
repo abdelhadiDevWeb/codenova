@@ -2,13 +2,13 @@ import type { Dictionary } from "./types";
 
 export const en: Dictionary = {
   meta: {
-    title: "CodeNova — Website & App Development Agency in Algeria",
+    title: "CodeNoova — Website & App Development Agency in Algeria",
     description:
-      "CodeNova creates websites, landing pages, e-commerce stores, mobile apps and custom software for businesses in Algeria. Transparent prices in DA and a free consultation.",
+      "CodeNoova creates websites, landing pages, e-commerce stores, mobile apps and custom software for businesses in Algeria. Transparent prices in DA and a free consultation.",
     keywords: [
-      "CodeNova",
-      "Code Nova",
-      "CodeNova DZ",
+      "CodeNoova",
+      "Code Noova",
+      "CodeNoova DZ",
       "website creation Algeria",
       "website design Algeria",
       "web development Algeria",
@@ -37,11 +37,11 @@ export const en: Dictionary = {
     { label: "Services", href: "#services" },
     { label: "Pricing", href: "#pricing" },
     { label: "Process", href: "#process" },
-    { label: "Why CodeNova", href: "#why-us" },
+    { label: "Why CodeNoova", href: "#why-us" },
     { label: "Contact", href: "#contact" },
   ],
   header: {
-    home: "CodeNova — home",
+    home: "CodeNoova — home",
     catalogue: "Catalogue",
     downloadCatalogue: "Download catalogue",
     getQuote: "Get a quote",
@@ -228,7 +228,7 @@ export const en: Dictionary = {
     ],
   },
   whyUs: {
-    eyebrow: "Why CodeNova",
+    eyebrow: "Why CodeNoova",
     title: "A development partner you can rely on",
     description:
       "We combine careful design with solid engineering, and we stay reachable at every step — so you can focus on running your business.",
@@ -270,7 +270,7 @@ export const en: Dictionary = {
     eyebrow: "Contact",
     title: "Ready to start your project?",
     description:
-      "Contact CodeNova today to book your free consultation and get a customized quote. We're happy to answer your questions.",
+      "Contact CodeNoova today to book your free consultation and get a customized quote. We're happy to answer your questions.",
     emailLabel: "Email us",
     phoneLabel: "Call us",
     locationLabel: "Find us",

@@ -28,7 +28,7 @@ export function Logo({
       />
       <span dir="ltr" className="text-xl font-extrabold tracking-tight">
         <span className={variant === "light" ? "text-navy-900" : "text-white"}>Code</span>
-        <span className={variant === "light" ? "text-brand-500" : "text-aqua-300"}>Nova</span>
+        <span className={variant === "light" ? "text-brand-500" : "text-aqua-300"}>Noova</span>
       </span>
     </Link>
   );
