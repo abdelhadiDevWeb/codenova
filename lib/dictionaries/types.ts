@@ -125,6 +125,12 @@ export type Dictionary = {
     languageNote?: string;
     coverLabel: string;
   };
+  faq: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    items: { question: string; answer: string }[];
+  };
   contact: {
     eyebrow: string;
     title: string;

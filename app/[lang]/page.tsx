@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { CatalogueCta } from "@/components/sections/catalogue-cta";
 import { Consultation } from "@/components/sections/consultation";
 import { Contact } from "@/components/sections/contact";
+import { Faq } from "@/components/sections/faq";
 import { Hero } from "@/components/sections/hero";
 import { Pricing } from "@/components/sections/pricing";
 import { Process } from "@/components/sections/process";
@@ -24,7 +25,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        // ProfessionalService is a LocalBusiness, which lets Google tie the logo to a place in Algiers.
+        "@type": ["Organization", "ProfessionalService"],
         "@id": `${site.url}/#organization`,
         name: site.name,
         alternateName: ["Code Noova", "CodeNoova DZ"],
@@ -42,6 +44,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           addressCountry: site.address.country,
         },
         areaServed: algeria,
+        currenciesAccepted: "DZD",
+        priceRange: "DA",
         knowsLanguage: ["ar", "fr", "en"],
         contactPoint: {
           "@type": "ContactPoint",
@@ -80,6 +84,16 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         about: { "@id": `${site.url}/#organization` },
         primaryImageOfPage: `${site.url}${site.ogImagePath}`,
       },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        inLanguage: lang,
+        mainEntity: dict.faq.items.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      },
     ],
   };
 
@@ -98,6 +112,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Process dict={dict.process} />
         <WhyUs dict={dict.whyUs} />
         <CatalogueCta dict={dict.catalogue} />
+        <Faq dict={dict.faq} />
         <Contact dict={dict.contact} lang={lang} />
       </main>
       <SiteFooter lang={lang} dict={dict} />

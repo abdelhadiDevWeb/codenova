@@ -52,8 +52,8 @@ export const fr: Dictionary = {
     language: "Langue",
   },
   hero: {
-    titleStart: "Nous créons des solutions digitales sur mesure pour les",
-    titleHighlight: "entreprises modernes",
+    titleStart: "Création de sites web, d'applications et de logiciels sur mesure",
+    titleHighlight: "en Algérie",
     titleEnd: ".",
     description:
       "Des landing pages percutantes aux applications mobiles complexes, nous donnons vie à votre vision — avec un code de qualité, un design soigné et des prix clairs.",
@@ -272,6 +272,53 @@ export const fr: Dictionary = {
     view: "Voir en ligne",
     languageNote: "Le catalogue est disponible en anglais.",
     coverLabel: "Catalogue de services",
+  },
+  faq: {
+    eyebrow: "FAQ",
+    title: "Questions fréquentes",
+    description: "Tout ce qu'il faut savoir avant de lancer votre projet de site web ou d'application en Algérie.",
+    items: [
+      {
+        question: "Combien coûte la création d'un site web en Algérie\u00a0?",
+        answer:
+          "Une landing page commence à 20\u00a0000 DA. Les sites vitrines, boutiques e-commerce et plateformes web sur mesure sont sur devis, car le prix dépend des pages et des fonctionnalités dont vous avez besoin. Après une consultation gratuite, nous vous envoyons un devis clair et détaillé en dinars algériens.",
+      },
+      {
+        question: "Combien coûte le développement d'une application mobile\u00a0?",
+        answer:
+          "Les applications mobiles Android et iOS commencent à partir de 200\u00a0000 DA. Le prix final dépend des fonctionnalités demandées et de la complexité technique, et vous recevez un devis personnalisé avant tout démarrage.",
+      },
+      {
+        question: "Combien de temps faut-il pour réaliser mon site ou mon application\u00a0?",
+        answer:
+          "Cela dépend de la taille du projet\u00a0: une landing page est livrée bien plus rapidement qu'une plateforme sur mesure ou une application mobile. Nous vous donnons un délai précis dans votre devis, après la consultation gratuite.",
+      },
+      {
+        question: "Où êtes-vous situés et travaillez-vous partout en Algérie\u00a0?",
+        answer:
+          "CodeNoova est basée à Draria, Alger. Nous accompagnons des entreprises et des particuliers partout en Algérie, en arabe, en français et en anglais.",
+      },
+      {
+        question: "La consultation est-elle vraiment gratuite\u00a0?",
+        answer:
+          "Oui. La première consultation est 100\u00a0% gratuite et sans engagement\u00a0: nous écoutons votre idée, vous présentons des projets déjà réalisés, vous recommandons la bonne solution et vous envoyons un devis.",
+      },
+      {
+        question: "Développez-vous des applications Android et iOS\u00a0?",
+        answer:
+          "Oui. Nous concevons et développons des applications mobiles Android et iOS à l'expérience native, et nous pouvons les connecter à vos systèmes, à votre site web ou à vos API existants.",
+      },
+      {
+        question: "Pouvez-vous intégrer l'intelligence artificielle à mon site ou mon application\u00a0?",
+        answer:
+          "Oui. Nous intégrons des chatbots et assistants virtuels IA en arabe, français et anglais, de l'automatisation intelligente, de l'analyse de données et des prédictions, ainsi que la reconnaissance d'images, de texte ou de voix, dans vos projets web, mobiles et desktop, nouveaux ou existants.",
+      },
+      {
+        question: "Mon site sera-t-il adapté aux mobiles et prêt pour Google\u00a0?",
+        answer:
+          "Oui. Chaque site que nous créons est responsive (téléphone, tablette et ordinateur), rapide et conçu selon les bonnes pratiques techniques du référencement naturel (SEO). Il peut aussi être multilingue en arabe, français et anglais.",
+      },
+    ],
   },
   contact: {
     eyebrow: "Contact",

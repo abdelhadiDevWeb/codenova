@@ -51,8 +51,8 @@ export const en: Dictionary = {
     language: "Language",
   },
   hero: {
-    titleStart: "We build tailored digital solutions for",
-    titleHighlight: "modern businesses",
+    titleStart: "Professional website, app & software development",
+    titleHighlight: "in Algeria",
     titleEnd: ".",
     description:
       "From striking landing pages to complex mobile applications, we bring your vision to life — with quality code, thoughtful design and clear pricing.",
@@ -265,6 +265,53 @@ export const en: Dictionary = {
     download: "Download PDF",
     view: "View online",
     coverLabel: "Services Catalogue",
+  },
+  faq: {
+    eyebrow: "FAQ",
+    title: "Frequently asked questions",
+    description: "Everything you need to know before starting your website or application project in Algeria.",
+    items: [
+      {
+        question: "How much does it cost to create a website in Algeria?",
+        answer:
+          "A landing page starts at 20,000 DA. Business websites, e-commerce stores and custom web platforms are priced on quote, because the price depends on the pages and features you need. After a free consultation, we send you a clear, detailed quote in Algerian dinars.",
+      },
+      {
+        question: "How much does a mobile application cost?",
+        answer:
+          "Mobile applications for Android and iOS start at 200,000 DA. The final price depends on the features requested and the technical complexity, and you receive a customized quote before any work begins.",
+      },
+      {
+        question: "How long does it take to build my website or app?",
+        answer:
+          "It depends on the size of the project: a landing page is delivered much faster than a custom platform or a mobile app. We give you a precise timeline in your quote, after the free consultation.",
+      },
+      {
+        question: "Where are you located, and do you work everywhere in Algeria?",
+        answer:
+          "CodeNoova is based in Draria, Algiers. We work with businesses and individuals all over Algeria, in Arabic, French and English.",
+      },
+      {
+        question: "Is the consultation really free?",
+        answer:
+          "Yes. The first consultation is 100% free and without commitment: we listen to your idea, show you projects we have already built, recommend the right solution and send you a quote.",
+      },
+      {
+        question: "Do you develop Android and iOS applications?",
+        answer:
+          "Yes. We design and develop native-feeling mobile applications for Android and iOS, and we can connect them to your existing systems, website or APIs.",
+      },
+      {
+        question: "Can you add artificial intelligence to my website or application?",
+        answer:
+          "Yes. We integrate AI chatbots and virtual assistants in Arabic, French and English, smart automation, data analysis and predictions, and image, text or voice recognition into new or existing web, mobile and desktop projects.",
+      },
+      {
+        question: "Will my website work on mobile and be ready for Google?",
+        answer:
+          "Yes. Every website we build is responsive (phone, tablet and computer), fast, and built with the technical best practices of search engine optimization (SEO), and it can be multilingual in Arabic, French and English.",
+      },
+    ],
   },
   contact: {
     eyebrow: "Contact",

@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   const { title, description, keywords } = dict.meta;
   const ogImage = { url: site.ogImagePath, width: 1200, height: 630, alt: site.name };
   const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
+  const bingVerification = process.env.BING_SITE_VERIFICATION;
 
   return {
     metadataBase: new URL(site.url),
@@ -63,7 +64,10 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
       follow: true,
       googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
     },
-    ...(googleVerification && { verification: { google: googleVerification } }),
+    verification: {
+      ...(googleVerification && { google: googleVerification }),
+      ...(bingVerification && { other: { "msvalidate.01": bingVerification } }),
+    },
   };
 }
 

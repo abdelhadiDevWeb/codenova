@@ -24,9 +24,11 @@ for (const file of [".env.local", ".env"]) {
 }
 
 const recipients = [
-  "abdouhadi2002@gmail.com" , 
-   "hadiabdou72@gmail.com",
-   "boudjemline.mohamed.abdelhadi@gmail.com",
+  "acil3967@gmail.com",
+   "hadiabdou721@gmail.com"
+  //  "blida@eurovisadz.com" , 
+  //  "getawaytravel@hotmail.com",
+  //  "contact@nour-education.net"
 //   "contact@sarlagrotech.com",
 //   "contact@maystro-delivery.com",
 //   "contact@algerianagripreneurs.dz",
